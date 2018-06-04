@@ -11,6 +11,7 @@
 |
 */
 
+Route::resource('passports','PassportController');
 Route::get('/yo', function () {
     return view('yo');
 });
