@@ -11,7 +11,9 @@
 |
 */
 
-Route::resource('passports','PassportController');
-Route::get('/yo', function () {
+Route::get('/', function (){
     return view('yo');
 });
+
+//route::get('/yo/create', 'Formcontroller@create');
+Route::resource('yo','FormController');
