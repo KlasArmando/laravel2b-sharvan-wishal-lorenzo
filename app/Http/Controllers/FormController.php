@@ -14,7 +14,8 @@ class FormController extends Controller
      */
     public function index()
     {
-        return view('forms.index');
+        $results = form::all();
+        return view('form.index', compact('persoon'));
     }
 
     /**
@@ -24,7 +25,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('form.create');
     }
 
     /**
@@ -35,7 +36,10 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $persoon = new persoon();
+        $persoon->name = input::get('naam');
+        $persoon->achternaam = input::get('achternaam');
+        return redirect('form');
     }
 
     /**
@@ -46,7 +50,7 @@ class FormController extends Controller
      */
     public function show(Form $form)
     {
-        //
+        return view('form.show', compact('form'));
     }
 
     /**

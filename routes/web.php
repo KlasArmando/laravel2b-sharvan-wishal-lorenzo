@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function (){
-    return view('yo');
+    return view('welcome');
 });
 
 //route::get('/yo/create', 'Formcontroller@create');
 Route::resource('yo','FormController');
+
+Route::get('/form/create', 'FormController@create');
+Route::post('/form/store', 'FormController@store');
