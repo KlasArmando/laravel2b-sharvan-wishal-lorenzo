@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function (){
-    return view('home');
+    return view('welcome');
 });
 Route::get('/about', function (){
     return view('about');
@@ -31,3 +31,4 @@ Route::get('/admin', 'AdminController@index');
 Auth::routes();
 
 Route::get('/home', 'AdminController@index')->name('home');
+route::post('/contact/submit', 'VraagController@submit');
