@@ -26,3 +26,8 @@ Route::resource('yo','FormController');
 
 Route::get('/form/create', 'FormController@create');
 Route::post('/form/store', 'FormController@store');
+Route::get('/admin', 'AdminController@index');
+
+Auth::routes();
+
+Route::get('/home', 'AdminController@index')->name('home');

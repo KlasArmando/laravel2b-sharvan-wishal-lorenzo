@@ -3,13 +3,20 @@
     <h1> contact</h1>
     {!! Form::open(['url' => 'contact/submit']) !!}
        <div class="form-group">
-           {{Form::text('username')}}
+           {{Form::label('naam')}}
+           {{Form::text('naam')}}
 
        </div>
-    <br
     <div class="form-group">
-        {{Form::text('username')}}
+        {{Form::label('naam')}}
+        {{Form::text('naam')}}
 
+    </div>
+    <div class="form-group">
+        {{Form::label('naam')}}
+        {{Form::text('naam')}}
+       {{Form::password('password', ['class' => 'awesome'])}}
+ {{Form::select('size', ['L' => 'Large', 'S' => 'Small'])}}
     </div>
 
     {!! Form::close() !!}
