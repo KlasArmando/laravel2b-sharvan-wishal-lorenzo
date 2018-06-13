@@ -15,10 +15,10 @@ Route::get('/', function (){
     return view('welcome');
 });
 Route::get('/about', function (){
-    return view('about');
+    return view('pages.about');
 });
 Route::get('/contact', function (){
-    return view('contact');
+    return view('pages.contact');
 });
 
 //route::get('/yo/create', 'Formcontroller@create');
@@ -32,3 +32,7 @@ Auth::routes();
 
 Route::get('/home', 'AdminController@index')->name('home');
 route::post('/contact/submit', 'VraagController@submit');
+route::resource('posts', 'Postcontroller');
+Route::get('/overons', function (){
+    return view('overons');
+});

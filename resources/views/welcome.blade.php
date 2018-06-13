@@ -1,4 +1,5 @@
-<!doctype html>
+@extends('layouts.app')
+        <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="utf-8">
@@ -26,6 +27,7 @@
         .flex-center {
             align-items: center;
             display: flex;
+            flex-flow: row wrap;
             justify-content: center;
         }
         .position-ref {
@@ -55,6 +57,10 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        @media  {
+
+        }
     </style>
 </head>
 <body>
@@ -70,21 +76,23 @@
         </div>
     @endif
 
+
     <div class="content">
         <div class="title m-b-md">
             Hoopp
         </div>
-        <div class="hoofdimg">
-            <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
-        </div>
         <div class="links">
-            <a href="https://laravel.com/docs">Documentation</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://forge.laravel.com">Forge</a>
+            <a href="/">home</a>
+            <a href="https://laracasts.com">stem</a>
+            <a href="https://laravel-news.com">aanmeldingsformulier</a>
+            <a href="overons">Over ons</a>
             <a href="http://hoopp.test/contact">contact</a>
         </div>
     </div>
+        <div class="hoofdimg">
+            <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
+        </div>
 </div>
+
 </body>
 </html>
