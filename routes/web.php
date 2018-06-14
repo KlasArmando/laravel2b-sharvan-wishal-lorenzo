@@ -32,4 +32,4 @@ Auth::routes();
 
 Route::get('/home', 'AdminController@index')->name('home');
 route::post('/contact/submit', 'VraagController@submit');
-route::resource('posts', 'Postcontroller');
+route::resource('post', 'Postcontroller');
