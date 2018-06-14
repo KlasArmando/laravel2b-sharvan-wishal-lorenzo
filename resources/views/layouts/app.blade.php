@@ -1,5 +1,10 @@
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+<div class="container">
+
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,14 +22,18 @@
             color: #636b6f;
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
+            height: 100vh;
+            margin: 0;
         }
-
-        /*.flex-center {*/
-            /*align-items: center;*/
-            /*display: flex;*/
-            /*flex-flow: row wrap;*/
-            /*justify-content: center;*/
-        /*}*/
+        .full-height {
+            height: 100vh;
+        }
+        .flex-center {
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
         .position-ref {
             position: relative;
         }
@@ -49,9 +58,8 @@
             text-transform: uppercase;
 
         }
-
         .m-b-md {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         @media  {
@@ -72,67 +80,28 @@
         </div>
     @endif
 
-<div class="flex-center position-ref full-height">
-{{--    @if (Route::has('login'))--}}
-        {{--<div class="top-right links">--}}
-            {{--@auth--}}
-                {{--<a href="{{ url('/home') }}">Home</a>--}}
-            {{--@else--}}
-                {{--<a href="{{ route('login') }}">Login</a>--}}
-                {{--<a href="{{ route('register') }}">Register</a>--}}
-            {{--@endauth--}}
-        {{--</div>--}}
-    {{--@endif--}}
-    <!-- Right Side Of Navbar -->
-    <ul class="navbar-nav ml-auto">
-    <!-- Authentication Links -->
-    @guest
-    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-    @else
-    <li class="nav-item dropdown">
-    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-    {{ Auth::user()->name }} <span class="caret"></span>
-    </a>
-{{----}}
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="{{ route('logout') }}"
-    onclick="event.preventDefault();
-    document.getElementById('logout-form').submit();">
-    {{ __('Logout') }}
-    </a>
-{{----}}
-    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-    style="display: none;">
-    @csrf
-    </form>
-    </div>
-    </li>
-    @endguest
+
     <div class="content">
         <div class="title m-b-md">
             Hoopp
         </div>
-        <div class="links">
-            <a href="https://laravel.com/docs">home</a>
-            <a href="https://laracasts.com">stem</a>
-            <a href="https://laravel-news.com">aanmeldingsformulier</a>
-            <a href="https://forge.laravel.com">Over ons</a>
-            <a href="http://hoopp.test/contact">contact</a>
-        </div>
-    </div>
+        <header>
+            <div class="links">
+                @include('includes.links')
+            </div>
+        </header>
     <div class="hoofdimg">
         <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
     </div>
 </div>
+<div>
+    @yield('content')
+</div>
 
-    <main class="py-4">
-        @yield('blog')
-    </main>
-    @yield('form')
 
-@yield('content')
+
 </body>
+    <footer>
+        @include('includes.footer')
+    </footer>
 </html>
-

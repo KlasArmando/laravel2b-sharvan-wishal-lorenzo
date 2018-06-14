@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
         <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -81,18 +81,19 @@
         <div class="title m-b-md">
             Hoopp
         </div>
-        <div class="links">
-            <a href="/">home</a>
-            <a href="https://laracasts.com">stem</a>
-            <a href="https://laravel-news.com">aanmeldingsformulier</a>
-            <a href="overons">Over ons</a>
-            <a href="http://hoopp.test/contact">contact</a>
+        <div class="header">
+            @include('includes.links')
         </div>
     </div>
-        <div class="hoofdimg">
-            <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
-        </div>
+    <div class="hoofdimg">
+        <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
+    </div>
 </div>
+<footer class="row">
+    @include('includes.footer')
+</footer>
+
+
 
 </body>
 </html>

@@ -33,6 +33,3 @@ Auth::routes();
 Route::get('/home', 'AdminController@index')->name('home');
 route::post('/contact/submit', 'VraagController@submit');
 route::resource('posts', 'Postcontroller');
-Route::get('/overons', function (){
-    return view('overons');
-});

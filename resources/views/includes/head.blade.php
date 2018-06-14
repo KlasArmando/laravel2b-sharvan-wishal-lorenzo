@@ -1,7 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: wishal.f
- * Date: 13-06-18
- * Time: 20:55
- */
+<div class="content">
+    <div class="title m-b-md">
+        Hoopp
+    </div>
