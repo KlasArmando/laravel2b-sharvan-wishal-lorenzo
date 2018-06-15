@@ -1,13 +1,13 @@
 @extends('layouts.app');
 @section('content');
-    <h1><Center>Post hier je blog</Center></h1>
+    <h1><Center>Post hier je quote</Center></h1>
     {!! Form::open(array('route' => 'post.store')) !!}
 
     <div class="form-group">
         {{Form::textarea('post')}}
 
     </div>
-  {{Form::submit('Verstuur Post',array('class' =>'btn btn-success btn-block', 'style' =>'margin-top'))}};
+  {{Form::submit('Verstuur quote',array('class' =>'btn btn-success btn-block', 'style' =>'margin-top'))}};
 <div>
     {!! Form::close() !!}
     </div>

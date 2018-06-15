@@ -10,7 +10,7 @@
             <div class="posts">
      <table class="table">
         <tr>
-            <th>Blog</th>
+            <th>Quote</th>
             <th>Actie</th>
         </tr>
 
@@ -18,15 +18,18 @@
            <tr>
                <td> {{$post->post }} </td>
 
-              <td> {{link_to_route('post.edit','edit',[$post->id],['class'=>'btn btn-primary'])}}
-                  |delete
+              <td>
+                  {!! Form::open(array('route'=>['post.destroy',$post->id],'method'=>'DELETE')) !!}
+                  {{link_to_route('post.edit','edit',[$post->id],['class'=>'btn btn-primary'])}}
+                    {!! Form::button('Delete',['class'=>'btn btn-secondary', 'type'=>'submit']) !!}
+                    {!! Form::close() !!}
               </td>
            @endforeach
      </table>
     </div>
         </div>
     </div>
-    {{link_to_route('post.create','Voeg nieuwe Post',null,['class'=>'btn btn-primary'])}}
+    {{link_to_route('post.create','Voeg nieuwe Quote',null,['class'=>'btn btn-primary'])}}
 
 
     @endsection

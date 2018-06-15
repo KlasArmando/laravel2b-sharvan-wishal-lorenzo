@@ -1,13 +1,16 @@
 @extends('layouts.app');
 @section('content');
-<h1><Center>Edit hier je blog</Center></h1>
-{!! Form::model($Post,array('route'=>['post.update',$Post->id],'method'=>'PUT')); !!}
-
+<h1><Center>Edit hier je quote</Center></h1>
+<form action="{{ route('post.index') }}"> <input type="submit" value="Ga terug">
+</form>
+<form action="{{ route('post.update',$post->id) }}" method="POST">
+    @csrf
+    @method('PUT')
 <div class="form-group">
     {{Form::textarea('post')}}
 
 </div>
-{{Form::submit('Edit',array('class' =>'btn btn-success btn-block', 'style' =>'margin-top'))}};
+    <button type="submit">Edit</button>
 <div>
     {!! Form::close() !!}
 </div>
