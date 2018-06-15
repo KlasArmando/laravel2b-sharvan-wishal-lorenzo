@@ -23,11 +23,8 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
-            margin: 0;
-        }
-        .full-height {
-            height: 100vh;
-        }
+            margin: 0;}
+
         .flex-center {
             align-items: center;
             display: flex;
@@ -57,9 +54,6 @@
             text-decoration: none;
             text-transform: uppercase;
 
-        }
-        .m-b-md {
-            margin-bottom: 30px;
         }
 
         @media  {
