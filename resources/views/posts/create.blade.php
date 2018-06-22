@@ -1,6 +1,6 @@
 @extends('layouts.app');
 @section('content');
-    <h1><Center>Post hier je quote</Center></h1>
+    <h1>Post hier je quote</h1>
     {!! Form::open(array('route' => 'post.store')) !!}
 
     <div class="form-group">

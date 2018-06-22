@@ -1,4 +1,4 @@
-
+@extends('layouts.app')
         <!doctype html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -8,90 +8,68 @@
 
     <title>Hoopp</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/app.css">
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
-        .full-height {
-            height: 100vh;
-        }
-        .flex-center {
-            align-items: center;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-        }
-        .position-ref {
-            position: relative;
-        }
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            font-size: 84px;
-        }
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
+    {{--<!-- Fonts -->--}}
+    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
+    {{--<link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">--}}
+{{--<style>--}}
+    {{--@media screen and (min-width: 150px) and (max-width: 300px) and (orientation: portrait) {--}}
+    {{--}--}}
 
-        }
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-
-        @media  {
-
-        }
-    </style>
+    {{--</style>--}}
 </head>
 <body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
-            @endauth
-        </div>
-    @endif
+{{--<div class="flex-center position-ref full-height">--}}
+    {{--@if (Route::has('login'))--}}
+        {{--<div class="top-right links">--}}
+            {{--@auth--}}
+                {{--<a href="{{ url('/home') }}">home</a>--}}
+                {{--<div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+                    {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                       {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                        {{--{{ __('Logout') }}--}}
+                    {{--</a>--}}
+                    {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+            {{--@else--}}
+                {{--<a href="{{ route('login') }}">Login</a>--}}
+                {{--<a href="{{ route('register') }}">Register</a>--}}
+            {{--@endauth--}}
+        {{--</div>--}}
+    {{--@endif--}}
+                {{--@guest--}}
+                    {{--<li><a class="nav-link" href="{{ route('login') }}">{{ __('INLOGGEN') }}</a></li>--}}
+                {{--@else--}}
+                    {{--<li class="nav-item dropdown">--}}
 
+                        {{--<div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+                            {{--<a class="dropdown-item" href="{{ route('logout') }}"--}}
+                               {{--onclick="event.preventDefault();--}}
+                                                     {{--document.getElementById('logout-form').submit();">--}}
+                                {{--{{ __('UITLOGGEN') }}--}}
+                            {{--</a>--}}
 
-    <div class="content">
-        <div class="title m-b-md">
-            Hoopp
-        </div>
-        <div class="header">
-            @include('includes.links')
-        </div>
-    </div>
-    <div class="hoofdimg">
-        <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"
-    </div>
-</div>
-<footer class="row">
-    @include('includes.footer')
-</footer>
+                            {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+                                {{--@csrf--}}
+                            {{--</form>--}}
+                        {{--</div>--}}
+                    {{--</li>--}}
+                {{--@endguest--}}
+
+    {{--<div class="content">--}}
+        {{--<div class="title m-b-md">--}}
+            {{--Hoopp--}}
+        {{--</div>--}}
+        {{--<div class="header">--}}
+            {{--@include('includes.links')--}}
+        {{--</div>--}}
+    {{--</div>--}}
+    {{--<div class="hoofdimg">--}}
+        {{--<img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg"--}}
+    {{--</div>--}}
+{{--</div>--}}
+{{--<footer>--}}
+    {{--@include('includes.footer')--}}
+{{--</footer>--}}
 
 
 

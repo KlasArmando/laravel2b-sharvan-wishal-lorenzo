@@ -1,1 +1,1 @@
-<div id="copyright text-right">© Copyright 2018 Wishal fakira</div>
+<div id="footer">© Copyright 2018 Wishal fakira</div>
