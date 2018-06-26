@@ -326,6 +326,7 @@ class ComposerStaticInit56a1452375d1f5634cdc7f379360c132
     );
 
     public static $classMap = array (
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Donateur' => __DIR__ . '/../..' . '/app/Donateur.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -340,6 +341,7 @@ class ComposerStaticInit56a1452375d1f5634cdc7f379360c132
         'App\\Http\\Controllers\\DonateurController' => __DIR__ . '/../..' . '/app/Http/Controllers/DonateurController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
+        'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\VraagController' => __DIR__ . '/../..' . '/app/Http/Controllers/VraagController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -355,6 +357,8 @@ class ComposerStaticInit56a1452375d1f5634cdc7f379360c132
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Role' => __DIR__ . '/../..' . '/app/Role.php',
+        'App\\Role_user' => __DIR__ . '/../..' . '/app/Role_user.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\Vraag' => __DIR__ . '/../..' . '/app/Vraag.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',

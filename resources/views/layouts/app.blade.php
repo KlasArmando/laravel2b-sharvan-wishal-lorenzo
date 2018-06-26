@@ -30,9 +30,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+                    {{--{{ config('app.name', 'Laravel') }}--}}
+                {{--</a>--}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,7 +77,6 @@
                 </div>
             </div>
         </nav>
-        <div class="content">
             <div class="title m-b-md">
                 Hoopp
             </div>
@@ -87,7 +86,7 @@
                 </div>
             </header>
             <div class="hoofdimg">
-                <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg">
+                <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg" width="100%">
         </div>
         <div>
             @yield('content')

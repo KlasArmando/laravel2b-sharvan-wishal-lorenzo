@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Skoetrbojz</title>
+    <title>Hoopp</title>
 
     <!-- Maps -->
 {{-- <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> --}}

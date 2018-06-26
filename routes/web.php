@@ -48,3 +48,8 @@ Route::resource('user', 'UserController');
 Auth::routes();
 route::get('/admin', 'AdminController@index');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('user', 'UserController');
