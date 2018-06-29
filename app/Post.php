@@ -8,7 +8,11 @@ class Post extends Model
 {
     protected $fillable = array('post');
 
-public function post()
-{
-    return $this->belongsto('App\user');
-}}
+
+    public $primaryKey = 'id';
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+}
