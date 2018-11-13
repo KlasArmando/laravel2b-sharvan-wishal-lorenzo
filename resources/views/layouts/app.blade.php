@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
+    @include('layouts.partials.head')
+    @include('layouts.partials.nav')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +21,17 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <title>Hoopp</title>
+    <title>Pizzaroo</title>
     {{--Styles--}}
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="{{asset('css/app.css')}}" type="text/css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet">
     {{-----}}
 </head>
 <body>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -77,16 +82,19 @@
                 </div>
             </div>
         </nav>
-            <div class="title m-b-md">
-                Hoopp
-            </div>
-            <header>
-                <div class="links">
-                    @include('includes.links')
-                </div>
-            </header>
-            <div class="hoofdimg">
-                <img src="https://plancanada.ca/image/planv4/heroes/one-time-donation_lg.jpg" width="100%">
+         <header>
+             <header class="masthead">
+                 <div class="container">
+                     <div class="intro-text">
+                         <div class="intro-lead-in">Welcome To Our Studio!</div>
+                         <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+                         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                     </div>
+                 </div>
+             </header>
+           {{--<div class="hoofdimg">--}}
+                {{--<img src="https://images.unsplash.com/photo-1511516412963-801b050c92aa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f23e22ac67f9dd47c1471491abfdda84&auto=format&fit=crop&w=1500&q=80">--}}
+           {{--</div>--}}
         </div>
         <div>
             @yield('content')
@@ -94,8 +102,11 @@
 
 
 
+
+    {{--@include('layouts.partials.nav')--}}
+
 </body>
 <footer>
-    @include('includes.footer')
+    @include('layouts.partials.footer')
 </footer>
 </html>
